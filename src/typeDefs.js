@@ -2,7 +2,7 @@ import {gql} from 'apollo-server-express';
 
 export const typeDefs = gql`
 type Query{      
-    datasets : [Dataset!]!     
+    datasets : [Dataset!]!   
 
 }
 

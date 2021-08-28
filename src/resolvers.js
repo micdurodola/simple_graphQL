@@ -1,13 +1,10 @@
 import {Dataset} from './models/country.model';
 
-
-export const resolvers = {       
+// Create Resolvers
+export const resolvers = {   
   
     Query : { 
- 
-   
-    datasets: async () => await Dataset.find()
-        
+    datasets: async () => await Dataset.find()        
     },
     Mutation:{        
         createData: async(_,{Country,Year,Area,totalPopulation}) => {
@@ -16,9 +13,6 @@ export const resolvers = {
             return data;
         }
     }
-
-  
-
 
 };
 
