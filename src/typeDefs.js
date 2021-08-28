@@ -11,10 +11,10 @@ type Dataset{
     Country: String! 
     Year : String!
     Area : Int!
-    Population : Int!
+    totalPopulation : Int!
 
 }
 type Mutation{
-    createData(Country:String!,Year:String!,Area:Int!,Population:Int!): Dataset!
+    createData(Country:String!,Year:String!,Area:Int!,totalPopulation:Int!): Dataset!
 }
 `;

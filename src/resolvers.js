@@ -10,8 +10,8 @@ export const resolvers = {
         
     },
     Mutation:{        
-        createData: async(_,{Country,Year,Area,Population}) => {
-            const data = new Dataset({Country,Year,Area,Population})                        
+        createData: async(_,{Country,Year,Area,totalPopulation}) => {
+            const data = new Dataset({Country,Year,Area,totalPopulation})                        
             await  data.save();            
             return data;
         }
