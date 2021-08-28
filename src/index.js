@@ -5,7 +5,7 @@ import {resolvers} from './resolvers';
 import {typeDefs} from './typeDefs';
 import dotenv from 'dotenv';
 
-// Declare path for environment variables
+// Declare path to dotenv file
 dotenv.config();
 dotenv.config({path:__dirname+'/.env'});
 
@@ -20,6 +20,7 @@ const server = async () => {
 
 
 // Connect to MongoDB Database
+const URI = process.env.MONGODB_URI;
 
 try {
     await mongoose.connect(URI,{useNewUrlParser:true,useUnifiedTopology:true});
